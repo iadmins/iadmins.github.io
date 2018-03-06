@@ -1,0 +1,623 @@
+/**
+ * iadmin v1.0
+ */
+.loading{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 19960211;
+	background-color: rgba(0,0,0,.1);
+}
+.loading i{
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	margin-left: -18px;
+	font-size: 36px;
+	text-shadow: 0 0 10px #FFFFFF;
+	
+}
+.i-tab-title,
+.i-tab-title .layui-this:after {
+	border-color: #e6e6e6
+}
+.i-tab {
+	margin: 10px 0;
+	text-align: left!important
+}
+
+.i-tab[overflow]>.i-tab-title {
+	overflow: hidden
+}
+
+.i-tab-title {
+	position: relative;
+	left: 0;
+	height: 40px;
+	white-space: nowrap;
+	font-size: 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	transition: all .2s;
+	-webkit-transition: all .2s
+}
+
+.i-tab-title li {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+	font-size: 14px;
+	transition: all .2s;
+	-webkit-transition: all .2s;
+	position: relative;
+	line-height: 40px;
+	min-width: 65px;
+	padding: 0 15px;
+	text-align: center;
+	cursor: pointer
+}
+
+.i-tab-title li a {
+	display: block
+}
+
+.i-tab-title .layui-this {
+	color: #000
+}
+
+.i-tab-title .layui-this:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '';
+	width: 100%;
+	height: 41px;
+	border-width: 1px;
+	border-style: solid;
+	border-bottom-color: #fff;
+	border-radius: 2px 2px 0 0;
+	box-sizing: border-box;
+	pointer-events: none
+}
+
+.i-tab-item {
+	display: none
+}
+
+
+
+.i-tab-content {
+	padding: 10px
+}
+
+.i-tab-title li .i-tab-close {
+	position: relative;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	line-height: 20px;
+	margin-left: 8px;
+	top: 1px;
+	text-align: center;
+	font-size: 14px;
+	color: #c2c2c2;
+	transition: all .2s;
+	-webkit-transition: all .2s
+}
+
+.i-tab-title li .i-tab-close:hover {
+	border-radius: 2px;
+	background-color: #FF5722;
+	color: #fff
+}
+
+.i-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.i-menu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 999;
+	width: 200px;
+	overflow-x: hidden;
+	background-color: #3e4452;
+	transition: width .3s;
+}
+
+.i-menu-logo {
+	z-index: 999;
+	height: 50px;
+	width: 200px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #3e4452;
+	color: #FFFFFF;
+	font-size: 24px;
+	font-weight: 100;
+	line-height: 50px;
+	text-align: center;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255, 255, 255, .1);
+	transition: width .3s;
+}
+.i-menu-logo img{
+	width: 80%;
+	height: 80%;
+}
+
+.i-main {
+	position: fixed;
+	left: 200px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 998;
+	width: auto;
+	overflow: hidden;
+	box-sizing: border-box;
+	transition: all .3s;
+}
+
+.i-menu-scroll {
+	width: 222px;
+	height: 100%;
+	overflow-x: hidden;
+	transition: width .3s;
+}
+
+.i-menu-nav>ul>li {
+	width: 200px;
+	transition: width .2s;
+}
+
+.i-menu-nav {
+	margin-top: 50px;
+}
+
+.i-menu-nav a {
+	color: #caccd1;
+	font-size: 13px;
+	transition: color .1s;
+}
+
+.i-menu-nav a:hover {
+	color: #ffffff;
+}
+
+.i-menu-nav>ul>li>a {
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px 15px 54px;
+	width: 200px;
+	height: 47px;
+	box-sizing: border-box;
+}
+
+.i-menu-nav>ul>li:last-child {
+	margin-bottom: 30px;
+}
+.i-menu-nav>ul>li>dl{
+	width:200px
+}
+.i-menu-nav>ul>li>dl>dd>a {
+	display: inline-block;
+	padding: 10px 20px 10px 60px;
+	width: 100%;
+	box-sizing: border-box;
+	transition: background-color .2s;
+}
+
+.i-menu-nav>ul>li>dl>dd>a.i-on {
+	background-color: rgba(255, 255, 255, .04);
+}
+
+.i-menu-nav>ul>li>dl>dd>a:hover {
+	background-color: rgba(255, 255, 255, .04);
+}
+
+.i-menu-nav>ul>li>dl {
+	background-color: #313744;
+	display: none;
+}
+
+.i-menu-nav .i-icon-right {
+	position: absolute;
+	top: 18px;
+	left: 168px;
+	font-size: 14px;
+	transition: transform .3s;
+	transform: rotate(0deg);
+}
+
+.i-menu-nav .i-icon-left {
+	font-size: 18px;
+	position: absolute;
+	top: 15px;
+	left: 20px;
+}
+
+.i-menu-nav a.i-on .i-icon-right {
+	transform: rotate(-180deg);
+}
+
+.iadmin.i-on .i-main {
+	left: 60px;
+}
+
+.iadmin.i-on .i-menu,
+.iadmin.i-on .i-menu-logo {
+	width: 60px;
+}
+
+.iadmin.i-on .i-menu-nav>ul>li {
+	width: 64px;
+}
+
+.i-mask {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 19960211;
+	background-color: rgba(0, 0, 0, .2);
+}
+
+@media screen and (max-width:768px) {
+	.iadmin .i-main {
+		left: 0;
+		right: 0;
+	}
+	.iadmin .i-menu,
+	.iadmin .i-menu-logo {
+		width: 0;
+	}
+	.iadmin.i-on-sm .i-main {
+		left: 200px;
+		right: -200px;
+	}
+	.iadmin.i-on-sm .i-menu,
+	.iadmin.i-on-sm .i-menu-logo {
+		width: 200px;
+	}
+	.iadmin.i-on .i-main {
+		left: 0;
+	}
+	.iadmin.i-on .i-menu,
+	.iadmin.i-on .i-menu-logo {
+		width: 0;
+	}
+	.iadmin.i-on .i-menu-nav>ul>li {
+		width: 0;
+	}
+	.iadmin.i-on .i-main {
+		right: 0;
+	}
+	.iadmin.i-on-sm .i-mask {
+		display: block;
+	}
+	.iadmin.i-on .i-mask {
+		display: none;
+	}
+}
+
+.iadmin.i-on .i-menu-nav>ul>li>dl>dd>a {
+	display: none;
+}
+
+.iadmin .i-menu-nav>ul>li {
+	background-color: #3e4452;
+	transition:background-color .3s ;
+}
+
+.iadmin .i-menu-nav>ul>li>a.i-on{
+	color: #FFF;
+	background-color:rgb(70,77,90);
+}
+
+.iadmin .i-menu-nav>ul>li:hover {
+	background-color:rgb(70,77,90);
+}
+
+.iadmin .i-menu-nav>ul>li>a>span {
+	display: inline-block;
+	transition: opacity .3s;
+}
+
+.iadmin.i-on .i-menu-nav>ul>li>a>span {
+	opacity: 0;
+}
+
+.layui-layer-tips .layui-layer-content {
+	background-color: #3e4452 !important;
+}
+
+.layui-layer-tips i.layui-layer-TipsL,
+.layui-layer-tips i.layui-layer-TipsR {
+	border-bottom-color: #3e4452 !important;
+}
+
+
+/**
+ * --------------------------
+ */
+
+.i-header {
+	height: 50px;
+	border-bottom: 1px solid #efefef;
+}
+
+.iadmin .layui-nav {
+	background-color: #FFFFFF;
+}
+
+.iadmin .layui-nav-item a {
+	color: #555;
+}
+
+.iadmin .layui-nav-item a:hover {
+	color: #000;
+}
+.i-main .layui-nav .layui-nav-item a[i-attr="userName"]{
+	padding: 0 34px 0 20px;
+}
+.iadmin .layui-nav .layui-nav-more {
+	border-top-color: #555;
+	right: 16px;
+}
+.iadmin .i-header .layui-nav .layui-nav-child{
+	left: auto;
+    right: 0;
+}
+.iadmin .layui-nav .layui-nav-mored,
+.layui-nav-itemed .layui-nav-more {
+	border-color: transparent transparent #555;
+}
+
+.iadmin .layui-layout-left {
+	left: 0;
+}
+
+.iadmin .layui-nav .layui-nav-item {
+	line-height: 50px;
+	transition: all .3s;
+}
+
+.iadmin .layui-nav .layui-nav-item:hover {
+	background-color: #f6f6f6;
+}
+
+.layui-nav-bar,
+.layui-nav .layui-this:after,
+.layui-nav-tree .layui-nav-itemed:after {
+	display: none;
+}
+
+.iadmin .layui-nav-child {
+	top: 55px;
+}
+
+.i-badge-dot {
+	margin: -9px -4px 0 !important;
+}
+
+.iadmin .layui-nav {
+	padding: 0;
+}
+
+.layui-nav .layui-nav-child dd.layui-this a,
+.layui-nav-child dd.layui-this {
+	background-color: transparent;
+	color: #333;
+}
+
+.layui-nav .layui-nav-child dd.layui-this a:hover,
+.layui-nav-child dd.layui-this:hover {
+	background-color: rgb(242, 242, 242);
+}
+
+.i-iframe {
+	border: none;
+	overflow: hidden;
+}
+
+.iadmin .i-tab-content {
+	background-color: rgb(242, 242, 242);
+	padding: 0;
+}
+
+.iadmin .i-tab {
+	margin: 0;
+}
+
+.iadmin .i-tab-title .layui-this:after {
+	border-width: 0;
+}
+
+.iadmin .i-tab-title {
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .06);
+	margin-right: 88px;
+	padding-right: 20px;
+	z-index: 1000;
+}
+
+.iadmin .i-tab.i-on .i-tab-title {
+	margin-right: 133px;
+}
+
+.iadmin .i-tab.i-on .i-tab-title {
+	margin-left: 45px;
+}
+
+.iadmin .i-tab .layui-nav.i-left .layui-nav-item:nth-child(1),
+.iadmin .i-tab .layui-nav.i-right .layui-nav-item:nth-child(1) {
+	display: none;
+}
+
+.iadmin .i-tab.i-on .layui-nav.i-left .layui-nav-item:nth-child(1),
+.iadmin .i-tab.i-on .layui-nav.i-right .layui-nav-item:nth-child(1) {
+	display: inline-block;
+}
+
+.iadmin .i-tab-title li {
+	border-right: 1px solid #f6f6f6;
+	transition: background-color .3s;
+	height: 40px;
+}
+
+.iadmin .i-tab-title li:hover {
+	background-color: #f6f6f6
+}
+
+.iadmin .i-tab-title li.layui-this {
+	background-color: #f6f6f6
+}
+
+.iadmin .i-tab-title li[i-attr="i-home"] {
+	padding: 0;
+	min-width: 46px;
+}
+
+.i-tab-title li .i-tab-close:hover {
+	background-color: #FF5722;
+}
+
+.iadmin .i-tab-title .i-tab-bar {
+	display: none;
+}
+
+.i-tab {
+	position: relative;
+}
+
+.i-tab .i-tab-icon-down a {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: inline-block;
+	width: 46px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	transition: background-color .2s;
+}
+
+.i-tab .i-tab-icon-down a:hover {
+	background-color: #f6f6f6;
+}
+
+.i-tab .layui-nav {
+	position: absolute;
+	top: 0;
+	z-index: 1001;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.i-tab .layui-nav.i-right {
+	right: 0;
+	box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, .06);
+}
+
+.i-tab .layui-nav.i-right .layui-nav-item {
+	border-left: 1px solid #efefef;
+}
+
+.i-tab .layui-nav.i-left {
+	left: 0;
+	box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .06);
+}
+
+.i-tab .layui-nav.i-left .layui-nav-item {
+	border-right: 1px solid #efefef;
+}
+
+.i-tab .layui-nav .layui-nav-item {
+	line-height: 40px;
+	height: 40px;
+	width: 44px;
+}
+
+.i-tab .layui-nav .layui-nav-item a {
+	padding: 0 15px;
+}
+
+.i-tab .layui-nav .layui-nav-more {
+	display: none;
+}
+
+.i-tab .layui-nav .layui-nav-child {
+	top: 40px;
+	left: auto;
+	right: 0;
+	border: 1px solid #e6e6e6;
+	box-shadow: none;
+}
+
+.i-tab-title[i-attr="navTab"]>ul {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	transition: left .1s;
+}
+[i-attr='systemSet'] {
+	position: fixed;
+	right: -300px;
+	top: 50px;
+	bottom: 0;
+	z-index: 999;
+	width: 300px;
+	background-color: #FFFFFF;
+	transition: right .2s;
+	box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+}
+.i-body-mask{
+	display: block;
+	position: fixed;
+	left:0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 999;
+	background-color: rgba(0,0,0,.2);
+}
+.iadmin [i-attr='systemSet'] .layui-card-body{
+	overflow-y:auto ;
+}
+.iadmin [i-attr='systemSet'] .layui-form-label{
+	font-size: 13px;
+	text-align: left;
+	width: 190px;
+	padding: 9px 0 0 15px;
+}
+.iadmin [i-attr='systemSet'] .layui-card-header{
+	height: 50px;
+	line-height: 50px;
+}
+.iadmin [i-attr='systemSet'] .layui-card-header .i-icon-right{
+	font-size: 18px;
+	float: right;
+	cursor: pointer;
+}
+.iadmin [i-attr='systemSet'] .layui-card-body{
+	color: #333;
+}
+.i-tab .layui-card-header{
+	display: none;
+	font-size: 13px;
+	z-index: 1002;
+	border-bottom: 1px solid #e6e6e6;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .06);
+}
+.i-tab .layui-card-header .layui-breadcrumb a:hover{
+	color:#999!important;
+}
