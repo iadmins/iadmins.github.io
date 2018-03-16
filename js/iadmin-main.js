@@ -3,10 +3,6 @@
  * 框架页面初始化方法
  */
 
-//菜单上方logo配置，可配置图片
-const logoText = "iadmin",
-	logoIcon = "<i class='fa fa-pied-piper'></i>";
-
 //手机设备判断
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 	$(".i-tab>.layui-nav, .i-tab>.i-tab-title").hide();
@@ -16,7 +12,8 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 layui.use(["layer", "element", "form"], function() {
 	var layer = layui.layer,
 		form = layui.form;
-
+	const logoText = $(".i-max-logo").html(),
+		logoIcon = $(".i-min-logo").html();
 	//iframe 自适应
 	$(".i-iframe").height($(window).height() - 92);
 	setMenuWidth(); //处理menu宽度
@@ -71,12 +68,12 @@ layui.use(["layer", "element", "form"], function() {
 	function setMenuWidth() {
 		if($(window).width() <= 768) {
 			$("#scaling").children().attr("class", "fa fa-caret-square-o-right"); //更换缩进按钮图标
-			$(".i-menu-logo").html(logoIcon); //修改Logo内容
+			$(".i-max-logo").html(logoIcon); //修改Logo内容
 			$(".i-menu-nav").find("dl").slideUp(160).siblings("a").removeClass("i-on"); //关闭子菜单
 			$(".iadmin").removeClass('i-on-sm').addClass("i-on"); //添加类名，使其缩进
 		} else {
 			$("#scaling").children().attr("class", "fa fa-caret-square-o-left"); //更换缩进按钮图标
-			$(".i-menu-logo").html(logoText); //修改Logo内容
+			$(".i-max-logo").html(logoText); //修改Logo内容
 			$(".iadmin").removeClass("i-on").removeClass('i-on-sm'); //添加类名，使其缩进
 		}
 	}
@@ -86,13 +83,13 @@ layui.use(["layer", "element", "form"], function() {
 		var elem = $(this).children();
 		if($(".iadmin").hasClass("i-on")) { // 放大
 			elem.attr("class", "fa fa-caret-square-o-left"); //更换缩进按钮图标
-			$(".i-menu-logo").html(logoText); //修改Logo内容
+			$(".i-max-logo").html(logoText); //修改Logo内容
 			if($("[i-attr=navTab]>ul").outerWidth(true) > $("[i-attr=navTab]").width() - 150) {
 				$("[i-filter=navTab]").addClass("i-on"); //tab增加on（显示tab左右按钮）
 			}
 		} else { // 缩小
 			elem.attr("class", "fa fa-caret-square-o-right"); //更换缩进按钮图标
-			$(".i-menu-logo").html(logoIcon); //修改Logo内容
+			$(".i-max-logo").html(logoIcon); //修改Logo内容
 			$(".i-menu-nav").find("dl").slideUp(160).siblings("a").removeClass("i-on"); //关闭子菜单
 			if($("[i-attr=navTab]>ul").outerWidth(true) < $("[i-attr=navTab]").width() + 150) {
 				//+150目的是menu的放大宽度是210缩小宽度是60
@@ -141,7 +138,7 @@ layui.use(["layer", "element", "form"], function() {
 			if(hsaClass) { // 判断当前是否为缩小状态
 				layer.close(menuTipsIndex); //关闭菜单上的tips提示
 				$(".iadmin").removeClass("i-on"); //删除i-on，菜单放开
-				$(".i-menu-logo").html(logoText); //修改Logo内容
+				$(".i-max-logo").html(logoText); //修改Logo内容
 				thisElem.addClass("i-on").siblings("dl").fadeIn(160); //打开子菜单
 				$("#scaling").children().attr("class", "fa fa-caret-square-o-left"); //更换缩进按钮图标
 			} else {
@@ -158,7 +155,6 @@ layui.use(["layer", "element", "form"], function() {
 		//添加面包屑导航
 		$(".i-tab .layui-breadcrumb *").remove();
 		$(".i-tab .layui-breadcrumb").append("<a href=\"javascript:changeTabs('navTab', 'one_-1');\">主页</a><span lay-separator>/</span><a><cite>" + $(this).parent().parent().siblings("a").text() + "</cite></a><span lay-separator>/</span><a><cite>" + $(this).text() + "</cite></a>");
-
 		openIframe($(this)); // 打开菜单页面
 	});
 
