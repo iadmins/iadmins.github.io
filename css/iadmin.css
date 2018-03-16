@@ -1,28 +1,31 @@
 /**
  * iadmin v1.0
  */
-.loading{
+
+.loading {
 	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	z-index: 19960211;
-	background-color: rgba(0,0,0,.1);
+	background-color: rgba(0, 0, 0, .1);
 }
-.loading i{
+
+.loading i {
 	position: absolute;
 	top: 45%;
 	left: 50%;
 	margin-left: -18px;
 	font-size: 36px;
 	text-shadow: 0 0 10px #FFFFFF;
-	
 }
+
 .i-tab-title,
 .i-tab-title .layui-this:after {
 	border-color: #e6e6e6
 }
+
 .i-tab {
 	margin: 10px 0;
 	text-align: left!important
@@ -87,8 +90,6 @@
 	display: none
 }
 
-
-
 .i-tab-content {
 	padding: 10px
 }
@@ -129,7 +130,7 @@
 	width: 200px;
 	overflow-x: hidden;
 	background-color: #3e4452;
-	transition: width .3s;
+	transition: width .2s;
 }
 
 .i-menu-logo {
@@ -147,9 +148,10 @@
 	text-align: center;
 	overflow: hidden;
 	border-bottom: 1px solid rgba(255, 255, 255, .1);
-	transition: width .3s;
+	transition: width .2s;
 }
-.i-menu-logo img{
+
+.i-menu-logo img {
 	width: 80%;
 	height: 80%;
 }
@@ -164,14 +166,14 @@
 	width: auto;
 	overflow: hidden;
 	box-sizing: border-box;
-	transition: all .3s;
+	transition: all .2s;
 }
 
 .i-menu-scroll {
 	width: 222px;
 	height: 100%;
 	overflow-x: hidden;
-	transition: width .3s;
+	transition: width .2s;
 }
 
 .i-menu-nav>ul>li {
@@ -205,9 +207,11 @@
 .i-menu-nav>ul>li:last-child {
 	margin-bottom: 30px;
 }
-.i-menu-nav>ul>li>dl{
-	width:200px
+
+.i-menu-nav>ul>li>dl {
+	width: 200px
 }
+
 .i-menu-nav>ul>li>dl>dd>a {
 	display: inline-block;
 	padding: 10px 20px 10px 60px;
@@ -234,7 +238,7 @@
 	top: 18px;
 	left: 168px;
 	font-size: 14px;
-	transition: transform .3s;
+	transition: transform .2s;
 	transform: rotate(0deg);
 }
 
@@ -317,21 +321,21 @@
 
 .iadmin .i-menu-nav>ul>li {
 	background-color: #3e4452;
-	transition:background-color .3s ;
+	transition: background-color .2s;
 }
 
-.iadmin .i-menu-nav>ul>li>a.i-on{
+.iadmin .i-menu-nav>ul>li>a.i-on {
 	color: #FFF;
-	background-color:rgb(70,77,90);
+	background-color: rgb(70, 77, 90);
 }
 
 .iadmin .i-menu-nav>ul>li:hover {
-	background-color:rgb(70,77,90);
+	background-color: rgb(70, 77, 90);
 }
 
 .iadmin .i-menu-nav>ul>li>a>span {
 	display: inline-block;
-	transition: opacity .3s;
+	transition: opacity .2s;
 }
 
 .iadmin.i-on .i-menu-nav>ul>li>a>span {
@@ -368,17 +372,21 @@
 .iadmin .layui-nav-item a:hover {
 	color: #000;
 }
-.i-main .layui-nav .layui-nav-item a[i-attr="userName"]{
+
+.i-main .layui-nav .layui-nav-item a[i-attr="userName"] {
 	padding: 0 34px 0 20px;
 }
+
 .iadmin .layui-nav .layui-nav-more {
 	border-top-color: #555;
 	right: 16px;
 }
-.iadmin .i-header .layui-nav .layui-nav-child{
+
+.iadmin .i-header .layui-nav .layui-nav-child {
 	left: auto;
-    right: 0;
+	right: 0;
 }
+
 .iadmin .layui-nav .layui-nav-mored,
 .layui-nav-itemed .layui-nav-more {
 	border-color: transparent transparent #555;
@@ -390,7 +398,7 @@
 
 .iadmin .layui-nav .layui-nav-item {
 	line-height: 50px;
-	transition: all .3s;
+	transition: all .2s;
 }
 
 .iadmin .layui-nav .layui-nav-item:hover {
@@ -471,7 +479,7 @@
 
 .iadmin .i-tab-title li {
 	border-right: 1px solid #f6f6f6;
-	transition: background-color .3s;
+	transition: background-color .2s;
 	height: 40px;
 }
 
@@ -544,7 +552,6 @@
 .i-tab .layui-nav .layui-nav-item {
 	line-height: 40px;
 	height: 40px;
-	width: 44px;
 }
 
 .i-tab .layui-nav .layui-nav-item a {
@@ -569,6 +576,7 @@
 	left: 0;
 	transition: left .1s;
 }
+
 [i-attr='systemSet'] {
 	position: fixed;
 	right: -300px;
@@ -578,46 +586,58 @@
 	width: 300px;
 	background-color: #FFFFFF;
 	transition: right .2s;
-	box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
 }
-.i-body-mask{
+
+.i-body-mask {
 	display: block;
 	position: fixed;
-	left:0;
+	left: 0;
 	right: 0;
 	top: 0;
 	bottom: 0;
 	z-index: 999;
-	background-color: rgba(0,0,0,.2);
+	background-color: rgba(0, 0, 0, .2);
 }
-.iadmin [i-attr='systemSet'] .layui-card-body{
-	overflow-y:auto ;
+
+.iadmin [i-attr='systemSet'] .layui-card-body {
+	overflow-y: auto;
 }
-.iadmin [i-attr='systemSet'] .layui-form-label{
+
+.iadmin [i-attr='systemSet'] .layui-form-label {
 	font-size: 13px;
 	text-align: left;
 	width: 190px;
 	padding: 9px 0 0 15px;
 }
-.iadmin [i-attr='systemSet'] .layui-card-header{
+
+.iadmin [i-attr='systemSet'] .layui-card-header {
 	height: 50px;
 	line-height: 50px;
 }
-.iadmin [i-attr='systemSet'] .layui-card-header .i-icon-right{
+
+.iadmin [i-attr='systemSet'] .layui-card-header .i-icon-right {
 	font-size: 18px;
 	float: right;
 	cursor: pointer;
 }
-.iadmin [i-attr='systemSet'] .layui-card-body{
+
+.iadmin [i-attr='systemSet'] .layui-card-body {
 	color: #333;
 }
-.i-tab .layui-card-header{
+
+.i-tab .layui-card-header {
 	display: none;
 	font-size: 13px;
 	z-index: 1002;
 	border-bottom: 1px solid #e6e6e6;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .06);
 }
-.i-tab .layui-card-header .layui-breadcrumb a:hover{
-	color:#999!important;
+
+.i-tab .layui-card-header .layui-breadcrumb a:hover {
+	color: #999!important;
+}
+
+.layui-nav-child {
+	z-index: 1002;
 }

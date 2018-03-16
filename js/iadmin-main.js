@@ -34,7 +34,7 @@ layui.use(["layer", "element", "form"], function() {
 
 	//菜单遮罩层点击
 	$(".i-mask").click(function() {
-		$("[i-attr=scaling]").children().attr("class", "fa fa-caret-square-o-right"); //更换缩进按钮图标
+		$("#scaling").children().attr("class", "fa fa-caret-square-o-right"); //更换缩进按钮图标
 		if($(window).width() <= 768) {
 			$(".iadmin").toggleClass("i-on-sm");
 		}
@@ -70,19 +70,19 @@ layui.use(["layer", "element", "form"], function() {
 	//处理menu宽度
 	function setMenuWidth() {
 		if($(window).width() <= 768) {
-			$("[i-attr=scaling]").children().attr("class", "fa fa-caret-square-o-right"); //更换缩进按钮图标
+			$("#scaling").children().attr("class", "fa fa-caret-square-o-right"); //更换缩进按钮图标
 			$(".i-menu-logo").html(logoIcon); //修改Logo内容
 			$(".i-menu-nav").find("dl").slideUp(160).siblings("a").removeClass("i-on"); //关闭子菜单
 			$(".iadmin").removeClass('i-on-sm').addClass("i-on"); //添加类名，使其缩进
 		} else {
-			$("[i-attr=scaling]").children().attr("class", "fa fa-caret-square-o-left"); //更换缩进按钮图标
+			$("#scaling").children().attr("class", "fa fa-caret-square-o-left"); //更换缩进按钮图标
 			$(".i-menu-logo").html(logoText); //修改Logo内容
 			$(".iadmin").removeClass("i-on").removeClass('i-on-sm'); //添加类名，使其缩进
 		}
 	}
 
 	//左侧菜单缩进点击事件
-	$("[i-attr=scaling]").click(function() {
+	$("#scaling").click(function() {
 		var elem = $(this).children();
 		if($(".iadmin").hasClass("i-on")) { // 放大
 			elem.attr("class", "fa fa-caret-square-o-left"); //更换缩进按钮图标
@@ -143,7 +143,7 @@ layui.use(["layer", "element", "form"], function() {
 				$(".iadmin").removeClass("i-on"); //删除i-on，菜单放开
 				$(".i-menu-logo").html(logoText); //修改Logo内容
 				thisElem.addClass("i-on").siblings("dl").fadeIn(160); //打开子菜单
-				$("[i-attr=scaling]").children().attr("class", "fa fa-caret-square-o-left"); //更换缩进按钮图标
+				$("#scaling").children().attr("class", "fa fa-caret-square-o-left"); //更换缩进按钮图标
 			} else {
 				thisElem.toggleClass("i-on").siblings("dl").slideToggle(160).parent().siblings("li").find("dl").slideUp(160).siblings("a").removeClass("i-on");
 			}
@@ -403,7 +403,7 @@ layui.use(["layer", "element", "form"], function() {
 		}
 		$("[i-attr=navTab] li").each(function() {
 			var id = $(this).attr("lay-id")
-			if(id != -1) {
+			if(id != "one_-1") {
 				deleteTabs("navTab", id);
 			}
 		});

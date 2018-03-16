@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="lib/layui/css/layui.css" />
 	<link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/iadmin.css" />
-	
+
 	<body>
 		<div class="loading">
 			<i class="layui-icon fa-pulse">&#xe63d;</i>
@@ -28,7 +28,7 @@
 				<div class="i-header">
 					<ul class="layui-nav layui-layout-left">
 						<li class="layui-nav-item">
-							<a href="javascript:;" i-attr="scaling"><i class="fa fa-caret-square-o-left"></i></a>
+							<a href="javascript:;" id="scaling"><i class="fa fa-caret-square-o-left"></i></a>
 						</li>
 						<li class="layui-nav-item">
 							<a href="javascript:;">i-admin 后台管理系统</a>
@@ -67,7 +67,7 @@
 							<a href="javascript:;">主页</a>
 						</span>
 					</div>
-					
+
 					<ul class="layui-nav i-left">
 						<li class="layui-nav-item">
 							<a href="javascript:;" i-attr="tabLeft"><i class="layui-icon">&#xe65a;</i></a>
@@ -179,11 +179,12 @@
 			});
 		}
 	</script>
-	
+
 	<script type="text/javascript">
 		//隐藏loading
-		setTimeout(function(){
+		setTimeout(function() {
 			$(".loading").fadeOut();
-		},500)
+		}, 500)
 	</script>
+
 </html>
