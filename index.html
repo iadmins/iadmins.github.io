@@ -11,20 +11,28 @@
 	<link rel="stylesheet" type="text/css" href="css/iadmin.css" />
 
 	<body>
+		<!--loading-->
 		<div class="loading">
 			<i class="layui-icon fa-pulse">&#xe63d;</i>
 		</div>
+		<!--loading 结束-->
+		<!--主框架-->
 		<div class="iadmin">
 			<div class="i-menu">
 				<div class="i-menu-scroll">
+					<!--LOGO-->
 					<div class="i-menu-logo"> </div>
+					<!--左侧菜单-->
 					<div class="i-menu-nav">
 						<ul> </ul>
 					</div>
+					<!--左侧菜单结束-->
 				</div>
 			</div>
+			<!--右侧区域-->
 			<div class="i-main">
 				<div class="i-mask"></div>
+				<!--顶部菜单-->
 				<div class="i-header">
 					<ul class="layui-nav layui-layout-left">
 						<li class="layui-nav-item">
@@ -61,25 +69,30 @@
 						</li>
 					</ul>
 				</div>
+				<!--顶部菜单结束-->
 				<div class="i-tab" i-filter="navTab">
+					<!--手机端面包屑导航-->
 					<div class="layui-card-header i-ellipsis">
 						<span class="layui-breadcrumb" lay-filter="test1">
 							<a href="javascript:;">主页</a>
 						</span>
 					</div>
-
+					<!--手机端面包屑导航结束-->
+					<!--Tab导航左侧按钮-->
 					<ul class="layui-nav i-left">
 						<li class="layui-nav-item">
 							<a href="javascript:;" i-attr="tabLeft"><i class="layui-icon">&#xe65a;</i></a>
 						</li>
 					</ul>
-
+					<!--Tab导航左侧按钮结束-->
+					<!--Tab导航-->
 					<div class="i-tab-title" i-attr="navTab">
 						<ul>
 							<li class="layui-this" i-attr="i-home" lay-id="one_-1"><i class="layui-icon layui-icon-home"></i></li>
 						</ul>
 					</div>
-
+					<!--Tab导航结束-->
+					<!--Tab导航右侧按钮-->
 					<ul class="layui-nav i-right">
 						<li class="layui-nav-item">
 							<a href="javascript:;" i-attr="tabRight"><i class="layui-icon">&#xe65b;</i></a>
@@ -102,13 +115,17 @@
 							</dl>
 						</li>
 					</ul>
+					<!--Tab导航右侧按钮结束-->
+					<!--iframe子页面区域-->
 					<div class="i-tab-content" i-attr='navTabContent'>
 						<div class="i-tab-item layui-show" lay-id="one_-1">
 							<iframe class="i-iframe" src="https://www.baidu.com" width="100%" style="height: 800px;"></iframe>
 						</div>
 					</div>
+					<!--iframe子页面区域结束-->
 				</div>
 			</div>
+			<!--系统设置菜单区域-->
 			<div class="layui-card layui-form" i-attr='systemSet'>
 				<div class="layui-card-header">系统设置
 					<i class="layui-icon layui-icon-about i-icon-right" i-attr="about" i-title="以下设置使用本地存储，不涉及数据库持久化存储；您在更换设备后登录，状态将会恢复为初始状态。"></i>
@@ -134,6 +151,7 @@
 					</div>
 				</div>
 			</div>
+			<!--系统设置菜单区域结束-->
 		</div>
 	</body>
 	<script src="lib/jQuery/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
