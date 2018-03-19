@@ -12,6 +12,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 layui.use(["layer", "element", "form"], function() {
 	var layer = layui.layer,
 		form = layui.form;
+	loading(); //加载loading
 	const logoText = $(".i-max-logo").html(),
 		logoIcon = $(".i-min-logo").html();
 	//iframe 自适应
@@ -186,11 +187,11 @@ layui.use(["layer", "element", "form"], function() {
 				content: '<iframe class="i-iframe" src=' + url + ' width="100%" height=' + ($(window).height() - 92) + '>',
 				id: tabId
 			});
+			loading(); //加载loading
 		}
 
 		//打开当前tab
 		changeTabs('navTab', tabId);
-
 		//打开当前Tab时，判断当前tab选择是否位于滚动导航可视区域外
 		var tabContainer = $("[i-attr=navTab]"), //tab最外侧容器
 			tabSubElem = tabContainer.find("ul"), //滑动容器
@@ -342,6 +343,7 @@ layui.use(["layer", "element", "form"], function() {
 			if($(this).hasClass("layui-show")) {
 				var iframe = $(this).find("iframe");
 				iframe.attr('src', iframe.attr('src'));
+				loading(); //加载loading
 				return false;
 			}
 		});
@@ -530,4 +532,15 @@ function deleteTabs(elem, id) {
 function changeTabs(elem, id) {
 	$("[i-filter=" + elem + "] .i-tab-title>ul>li[lay-id=" + id + "]").addClass("layui-this").siblings().removeClass("layui-this");
 	$("[i-filter=" + elem + "]>.i-tab-content>.i-tab-item[lay-id=" + id + "]").addClass("layui-show").siblings().removeClass("layui-show");
+}
+
+function loading() {
+	var idx = layer.load(0, {
+		skin: 'i-loading',
+		shade: 0.1,
+		content: '<div class="sk-wave"><div class="sk-rect sk-rect1"></div><div class="sk-rect sk-rect2"></div><div class="sk-rect sk-rect3"></div><div class="sk-rect sk-rect4"></div><div class="sk-rect sk-rect5"></div></div>'
+	});
+	$(".i-iframe").on("load", function() {
+		layer.close(idx);
+	});
 }
