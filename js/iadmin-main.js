@@ -322,7 +322,7 @@ layui.use(["layer", "element", "form"], function() {
 
 	//点击系统首页，关闭右侧所有菜单
 	$("[i-attr=i-home]").click(function() {
-		$(".i-menu-nav").find("dl").slideUp(160);
+		$(".i-menu-nav").find("dl").slideUp(160).siblings("a").removeClass("i-on");
 	});
 
 	//全屏切换
