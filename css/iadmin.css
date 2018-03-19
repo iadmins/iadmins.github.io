@@ -653,6 +653,7 @@
 }
 
 .sk-wave .sk-rect {
+	box-shadow: 0 0 2px rgba(255,255,255,.5);
 	background-color: #333;
 	height: 100%;
 	width: 3px;

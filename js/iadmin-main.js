@@ -540,7 +540,7 @@ function loading() {
 		shade: 0.1,
 		content: '<div class="sk-wave"><div class="sk-rect sk-rect1"></div><div class="sk-rect sk-rect2"></div><div class="sk-rect sk-rect3"></div><div class="sk-rect sk-rect4"></div><div class="sk-rect sk-rect5"></div></div>'
 	});
-	var flag = $(".i-iframe").on("load", function() {
+	$(".i-iframe").on("load", function() {
 		layer.close(idx);
 	});
 	setTimeout(function() {
